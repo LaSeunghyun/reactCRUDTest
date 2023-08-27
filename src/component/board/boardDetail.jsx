@@ -20,6 +20,10 @@ export default function DetailContent(){
         navigate(-1)
     }
 
+    const UpdateContent = () => {
+        window.confirm("미적용")
+    }
+
     return(
         <Container>
             <Component>
@@ -27,7 +31,7 @@ export default function DetailContent(){
                     <BoardTitle name="title" key={list[id].idx} defaultValue={list[id].title}/>
                     <BoardContent name="content" defaultValue={list[id].content}/>
                     <ButtonComponentCss>
-                        <ConfirmButtonCss onClick={() => console.log('삭제')}>수정</ConfirmButtonCss>
+                        <ConfirmButtonCss onClick={() => UpdateContent()}>수정</ConfirmButtonCss>
                         <ConfirmButtonCss onClick={() => DelContent()}>삭제</ConfirmButtonCss>
                         <ConfirmButtonCss onClick={() => navigate(-1)}>뒤로</ConfirmButtonCss>
                     </ButtonComponentCss>
