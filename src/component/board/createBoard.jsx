@@ -1,4 +1,4 @@
-import { Container, MainComponent, Component, BoardTitle, BoardContent } from "../../css/component"
+import { Container, MainComponent, Component, BoardTitle, BoardContent, InputContent, InputTitle } from "../../css/component"
 import { useSetRecoilState, useRecoilState } from "recoil"
 import { boardList } from "../../recoil/atom"
 import { ButtonComponentCss, ConfirmButtonCss } from "../../css/button"
@@ -38,8 +38,8 @@ export default function CreateBoard(){
         <Container>
             <Component>
                 <MainComponent>
-                    <BoardTitle name="title" onChange={inputs} />
-                    <BoardContent name="content" onChange={inputs} />
+                    <InputTitle name="title" onChange={inputs} />
+                    <InputContent name="content" onChange={inputs} />
                     <ButtonComponentCss>
                         <ConfirmButtonCss onClick={() => BoardSet()}>승인</ConfirmButtonCss>
                         <ConfirmButtonCss onClick={() => navigate('/')}>취소</ConfirmButtonCss>

@@ -30,5 +30,17 @@ const BoardContent = styled.div`
     height : 30rem;
     border : 1px solid gray;
 `
+const InputTitle = styled.input`
+    width : 95%;
+    height : 2rem;
+    border : 1px solid gray;
+`
 
-export { MainComponent, Container, Component, BoardTitle, BoardContent };
+const InputContent = styled.input`
+    margin-top: 10px;
+    width : 95%;
+    height : 30rem;
+    border : 1px solid gray;
+`
+
+export { MainComponent, Container, Component, BoardTitle, BoardContent, InputContent, InputTitle };
