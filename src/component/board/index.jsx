@@ -19,8 +19,8 @@ export default function BoardList(){
             <Component>
                 <MainComponent>
                     {
-                        [...List].reverse().map((list, idx) => {
-                            return <ListCss key={idx} onClick={() => detailContent(idx) }>{list.title}</ListCss>
+                        [...List].reverse().map((list, i) => {
+                            return <ListCss key={list.idx} onClick={() => detailContent(list.idx) }>{list.title}</ListCss>
                         })
                     }
                     <ButtonComponentCss>

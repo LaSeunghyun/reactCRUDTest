@@ -16,7 +16,7 @@ const ConfirmButtonCss = styled(ButtonComponentCss)`
   align-items: center;
   cursor : pointer; 
   ${function (props) {
-    if (props.children == "승인" || props.children == "수정" ) {
+    if (props.children == "승인" || props.children == "수정" || props.children == "저장"  ) {
       return "background-color : #003BFF; color : white";
     } else if (props.children == "취소" || props.children == "삭제") {
       return "background-color : #FF2F2F; color : white";

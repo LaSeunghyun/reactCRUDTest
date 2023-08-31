@@ -8,31 +8,27 @@ const Container = styled.div`
 const Component = styled.div`
     display : flex;
     width : 100%;
-    justify-content : flex-end;
 `
 
 const MainComponent = styled(Component)`
     display : inline;   
-    width : 85%;
+    width : 100%;
     height : 100%;
     justify-content : center;
+    margin : 10px;
 `
 
-const GnbStyled = styled.div`
-    width : 100%;
-    height : 100px;
-    background-color : black;
-`
-
-const BoardTitle = styled.input`
+const BoardTitle = styled.div`
     width : 95%;
     height : 2rem;
-    margin : 10px;
-`
-const BoardContent = styled.input`
-    width : 95%;
-    height : 30rem;
-    margin : 10px;
+    border : 1px solid gray;
 `
 
-export { MainComponent, GnbStyled, Container, Component, BoardTitle, BoardContent };
+const BoardContent = styled.div`
+    margin-top: 10px;
+    width : 95%;
+    height : 30rem;
+    border : 1px solid gray;
+`
+
+export { MainComponent, Container, Component, BoardTitle, BoardContent };

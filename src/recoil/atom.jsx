@@ -13,7 +13,7 @@ export const boardList = atom({
             'idx' : 1,
             'id' : '가군',
             'title' : '2번',
-            'content' : '2번',
+            'content' : '헷갈려',
             'regdate' : '2023-08-28'
         },
     ]
