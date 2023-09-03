@@ -1,20 +1,30 @@
-import { atom } from "recoil";
+import axios from "axios";
+import { atom, selector } from "recoil";
 
-export const boardList = atom({
+const boardList = atom({
     key : 'boardList',
-    default : [
-        {
-            'idx' : 0,
-            'id' : '라각운',
-            'title' : '타이틀',
-            'content' : '구랭',
-            'regdate' : '2023-08-27'
-        },{
-            'idx' : 1,
-            'id' : '가군',
-            'title' : '2번',
-            'content' : '헷갈려',
-            'regdate' : '2023-08-28'
-        },
-    ]
+    default : {
+            'idx' : '',
+            'id' : '',
+            'title' : '',
+            'content' : '',
+            'regdate' : ''
+        }
 })
+
+const boardListSelector = selector({
+    key : boardListSelector,
+    get : async({get}) => {
+        const params = get(boardList);
+        const {data} = await axios.get('/api/v1/board', {
+            params : params
+        })
+        return data
+    },
+    set : ({set}, newValue) => {
+        set(boardList, newValue)
+    }
+})
+
+
+export { boardList, boardListSelector }

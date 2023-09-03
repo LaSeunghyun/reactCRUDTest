@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useRecoilState } from "recoil"
-import { boardList } from "../../recoil/atom"
+import { boardListSelector } from "../../recoil/atom"
 import { Container, MainComponent, Component, BoardTitle, BoardContent } from "../../css/component"
 import { ButtonComponentCss, ConfirmButtonCss } from "../../css/button"
 import { useNavigate } from "react-router-dom"
@@ -11,7 +11,8 @@ export default function DetailContent(){
     const { id } = useParams();
     const idx = Number(id)
     const [update, setUpdate] = useState(false)
-    const [list, setList] = useRecoilState(boardList)
+    const [list, setList] = useRecoilState(boardListSelector)
+    console.log(list)
     const navigate = useNavigate();
 
     const DelContent = () => {

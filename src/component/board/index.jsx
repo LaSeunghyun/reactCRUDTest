@@ -1,13 +1,13 @@
 import { Container, MainComponent, Component } from "../../css/component"
 import { ListCss } from "../../css/list"
 import { useRecoilValue } from "recoil"
-import { boardList } from "../../recoil/atom"
+import { boardListSelector } from "../../recoil/atom"
 import { ButtonComponentCss, ConfirmButtonCss } from "../../css/button"
 import { useNavigate } from "react-router-dom"
 
 export default function BoardList(){
-    const List = useRecoilValue(boardList);
-    
+    const List = useRecoilValue(boardListSelector);
+    console.log(List)
     const navigate = useNavigate();
 
     const detailContent = (idx) => {
