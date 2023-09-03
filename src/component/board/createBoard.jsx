@@ -1,13 +1,12 @@
 import { Container, MainComponent, Component, BoardTitle, BoardContent, InputContent, InputTitle } from "../../css/component"
-import { useSetRecoilState, useRecoilState } from "recoil"
-import { boardList } from "../../recoil/atom"
+import { useRecoilState } from "recoil"
+import { boardListSelector } from "../../recoil/atom"
 import { ButtonComponentCss, ConfirmButtonCss } from "../../css/button"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 export default function CreateBoard(){
-    const [list, setList] = useRecoilState(boardList)
-    // const setBoardList = useSetRecoilState(boardList)
+    const [list, setList] = useRecoilState(boardListSelector)
     const navigate = useNavigate();
     const [board, setBoard] = useState({
         'idx' : 3,
