@@ -3,7 +3,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CreateBoard from "./component/board/createBoard";
 import DetailContent from "./component/board/boardDetail";
 import "./App.css";
-import { SnbStyled, TopBar, GnbStyled, Contents } from "./css/component/Gnb";
+import {
+  SnbStyled,
+  GnbStyled,
+  Contents,
+  UserIcon,
+  User,
+} from "./css/component/Gnb";
+import MenuList from "./component/snb";
+import TopMenu from "./component/topbar";
 
 function App() {
   const isActive = (e) => {
@@ -15,17 +23,20 @@ function App() {
 
   return (
     <div className="App">
-      <SnbStyled onClick={isActive}>ddd</SnbStyled>
+      <SnbStyled onClick={isActive}>
+        <User>
+          <UserIcon />
+        </User>
+        <MenuList />
+      </SnbStyled>
       <GnbStyled>
-        <TopBar>sdfsdfsdf</TopBar>
+        <TopMenu />
         <Contents>
-          <Router>
-            <Routes>
-              <Route exact path="/" element={<BoardList />} />
-              <Route path="/createBoard" element={<CreateBoard />} />
-              <Route path="/board/:id" element={<DetailContent />} />
-            </Routes>
-          </Router>
+          <Routes>
+            <Route exact path="/" element={<BoardList />} />
+            <Route path="/createBoard" element={<CreateBoard />} />
+            <Route path="/board/:id" element={<DetailContent />} />
+          </Routes>
         </Contents>
       </GnbStyled>
     </div>

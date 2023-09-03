@@ -3,6 +3,7 @@ import styled from "styled-components";
 const ButtonComponentCss = styled.div`
     display : flex;
     width : 96%;
+    height: 100%;
     justify-content : flex-end;
 `
 

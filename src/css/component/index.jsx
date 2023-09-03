@@ -15,7 +15,8 @@ const MainComponent = styled(Component)`
     width : 100%;
     height : 100%;
     justify-content : center;
-    margin : 10px;
+    background-color : #212B36;
+    padding : 10px;
 `
 
 const BoardTitle = styled.div`
@@ -34,6 +35,8 @@ const InputTitle = styled.input`
     width : 95%;
     height : 2rem;
     border : 1px solid gray;
+    background-color : #212B36;
+    color : white;
 `
 
 const InputContent = styled.input`
@@ -41,6 +44,8 @@ const InputContent = styled.input`
     width : 95%;
     height : 30rem;
     border : 1px solid gray;
+    background-color : #212B36;
+    color : white;
 `
 
 export { MainComponent, Container, Component, BoardTitle, BoardContent, InputContent, InputTitle };
